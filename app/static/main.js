@@ -30,6 +30,7 @@ async function onClick() {
     console.log(image_medium);
     console.log(document.getElementsByTagName('img')[0].src);
     document.getElementsByTagName('img')[0].src = '/static/images/' + image_id +'.jpg';
+    document.getElementsByTagName('img')[0].alt = image_name;
     console.log(document.getElementsByTagName('img')[0].src);
     currentId = switchImage(identifier);
 }
