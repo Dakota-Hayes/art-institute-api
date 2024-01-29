@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" href="../static/css/main.css">
 <script src="https://kit.fontawesome.com/33cbf8cef6.js" crossorigin="anonymous"></script>
-<script src="{{ url_for('site.serve_main_js') }}" defer></script>
+<script src="{{ url_for('site.serve_script', file_name='main.js') }}" defer></script>
 <title>ART INSTITUTE OF CHICAGO FINE ART API DEMO</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
     <div class="container-fluid p-0 mt-5 mb-0 mx-0">
         {% block content %}
         {% endblock %}
-        <button onclick="event.stopPropagation(); rotateImages(24645)">click me</button>
+        <button onclick="event.stopPropagation(); onClick()">Next Image</button>
     </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
