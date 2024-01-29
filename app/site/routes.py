@@ -9,7 +9,3 @@ def home():
 @site.route('/static/<path:file_name>')
 def serve_script(file_name):
     return send_from_directory('static',file_name)
-
-@site.route('/static/images/<path:image_name>')
-def serve_image(image_name):
-    return send_from_directory('images',image_name)

@@ -1,14 +1,44 @@
 {% extends 'base.html' %}
 {% block content %} 
 <section id="banner-section">
-    <div id="banner-container" class="container-fluid p-0 m-0">
-        <div id="banner-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div id="banner-inner-carousel" class="carousel-inner container-fluid p-0 m-0">
-                <div id="carousel-image" class="carousel-item active container-fluid p-0 m-0">
-                    <img class="w-100 p-0" src="{{ url_for('site.serve_image', image_name='5e032f0c-42d3-74e4-1bb6-66250a8ad6c6.jpg') }}" alt="">
+    <div id="banner-container" class="container-fluid p-0 m-0" style="background-color: black;">
+        <div class="container-fluid row p-5 m-0">
+            <div class="container-fluid col-6 p-0 m-auto">
+                <div class="container-fluid row p-0 m-0">
+                    <div id="banner-carousel" class="carousel slide" data-bs-ride="carousel">
+                        <div id="banner-inner-carousel" class="carousel-inner container-fluid p-0 m-0">
+                            <div id="carousel-image" class="carousel-item active container-fluid p-0 m-0">
+                                <img class="w-100 p-0" src="/static/images/77ecb291-d716-f898-b491-3192a96307c8.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="carousel-fade" class="carousel-caption m-0 container-fluid" style="left: 0%; top: 0; bottom: auto; background: linear-gradient(to top, rgba(255,255,255,0) 0%,rgb(0,0,0) 40%)"><br></div>
-                <div id="carousel-fade" class="carousel-caption m-0 container-fluid" style="left: 0%; top: auto; bottom: 0; background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgb(0,0,0) 40%)"><br></div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="featured-section">
+    <div id="featured-container" class="container-fluid p-0 m-0">
+        <div class="container-fluid row p-5 m-0">
+            <div id="featured-artwork" class="container-fluid col-8 p-0">
+                <div class="container-fluid row p-0 m-0">
+                    <div id="featured-artwork-details" class="container-fluid col-lg-7 col-md-7 col-12 text-lg-start text-md-start text-center px-lg-5 px-md-5 px-md-5 py-lg-0 py-md-0 p-5 m-auto">
+                        <div class="row py-0">
+                            <p id="artwork-title" class="" style="color: black; font-size: calc(.5vw + .5vh + .5vmin); font-weight:bold">Half-Length Female Nude</p>
+                        </div>
+                        <div class="row py-0">
+                            <p id="artist-title" class="" style="color: black; font-size: calc(.4vw + .4vh + .4vmin);">Pablo Picasso</p>
+                        </div>
+                        <div class="row py-0">
+                            <p id="artwork-medium" class="" style="color: black; font-size: calc(.4vw + .4vh + .4vmin);">Oil on canvas</p>
+                        </div>
+                    </div>
+                    <div id="featured-next-button" class="col-lg-2 col-md-2 col-12 m-auto container-fluid">
+                        <div class="row py-0">
+                            <button class="align-content-center" style="height: 40px; border-style: solid; border-color: rgb(58, 58, 58); background-color: rgb(255, 159, 95); border-width: 1px; color: white; font-size: calc(.4vw + .4vh + .4vmin);" onclick="event.stopPropagation(); onClick()"> Next Image</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

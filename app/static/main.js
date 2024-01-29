@@ -20,10 +20,17 @@ async function onClick() {
     let image_id = data_response.data.image_id;
     console.log(image_id);
     let image_name = data_response.data.title;
+    document.getElementById('artwork-title').textContent = image_name;
     console.log(image_name);
     let artist_name = data_response.data.artist_title;
+    document.getElementById('artist-title').textContent = artist_name;
     console.log(artist_name);
-    document.getElementsByTagName('img')[0].src = ``;
+    let image_medium = data_response.data.medium_display;
+    document.getElementById('artwork-medium').textContent = image_medium;
+    console.log(image_medium);
+    console.log(document.getElementsByTagName('img')[0].src);
+    document.getElementsByTagName('img')[0].src = '/static/images/' + image_id +'.jpg';
+    console.log(document.getElementsByTagName('img')[0].src);
     currentId = switchImage(identifier);
 }
 
